@@ -390,6 +390,21 @@ header h3 {
   .step-text {
     flex: 100%;
   }
+  .service-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .service-grid-item.basic {
+    grid-column: 1;
+  }
+  .service-grid-item.both {
+    grid-column: 1 / -1;
+  }
+  .service-grid-item.cancel {
+    transform: none;
+    writing-mode: unset;
+    grid-column: 1/ -1;
+    grid-row: -1;
+  }
 }
 /*MEDIA QUERY FOR MOBILE PHONES AND SMALLER*/
 @media screen and (max-width: 575px) {
@@ -414,4 +429,5 @@ header h3 {
   .contact-form {
     order: 3;
   }
+
 }
